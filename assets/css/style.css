@@ -16,14 +16,6 @@ body {
 a {
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Sora", sans-serif;
-}
 input,
 textarea,
 select,
@@ -78,11 +70,17 @@ button {
   font-weight: 400;
   line-height: 1.67; /* 166.667% */
 }
+.section-heading {
+  color: #212832;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.25; /* 125% */
+}
 /* Header */
 .header--fixed {
   position: sticky;
   top: -28px;
-  z-index: 2;
+  z-index: 999;
   background: #fff;
 }
 .header__inner {
@@ -429,4 +427,89 @@ button {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 1; /* 100% */
+}
+/* feature */
+.feature {
+  margin-top: 160px;
+}
+.feature__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.feature__img-wrap {
+  position: relative;
+  width: 470px;
+}
+.feature__img-wrap::after {
+  position: absolute;
+  content: url(../img/feature-background.svg);
+  bottom: -2px;
+  left: 0;
+}
+.feature__img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  max-width: calc(100% - 14px);
+  margin: 0 auto;
+}
+.feature__decor {
+  position: absolute;
+  z-index: 2;
+  top: 76px;
+  right: 55px;
+}
+.feature__congratulations {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 96px;
+  right: -107px;
+  width: 226px;
+  height: 70px;
+  padding: 15px 30px 15px 15px;
+  border-radius: 8px;
+  background: #fffdfa;
+  box-shadow: 0px 14px 34px 0px rgba(0, 0, 0, 0.07);
+  z-index: 2;
+  white-space: nowrap;
+}
+.feature__congratulations-info {
+  margin-left: 10px;
+}
+.feature__congratulations-heading {
+  color: #212832;
+  font-family: Inter, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.feature__congratulations-desc {
+  color: #696d76;
+  font-family: Inter;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.feature__info {
+  width: 470px;
+  margin-left: auto;
+}
+.feature__title:first-of-type {
+  margin-top: 70px;
+}
+.feature__title {
+  margin-top: 30px;
+  color: #212832;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.45; /* 145.455% */
+}
+.feature__desc {
+  margin-top: 16px;
+  color: #696d76;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
 }
