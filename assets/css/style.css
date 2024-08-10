@@ -30,7 +30,7 @@ button {
 }
 .btn {
   --height: 58px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 113px;
@@ -75,6 +75,33 @@ button {
   font-size: 4rem;
   font-weight: 700;
   line-height: 1.25; /* 125% */
+}
+.info-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 28px;
+  row-gap: 18px;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  color: #212832;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.66; /* 166.667% */
+}
+.info-item::before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-right: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+.info-btn {
+  margin-top: 38px;
+  min-width: 149px;
 }
 /* Header */
 .header--fixed {
@@ -512,4 +539,180 @@ button {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+}
+/* Payment */
+.payment {
+  margin-top: 160px;
+}
+.payment__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 30px;
+}
+.payment__info {
+  width: 470px;
+}
+.payment__desc {
+  margin-top: 20px;
+}
+.payment__media {
+  position: relative;
+}
+.payment-card {
+  position: relative;
+  overflow: hidden;
+  width: 482px;
+  border-radius: 20px;
+  background: linear-gradient(76deg, #8679e4 11.52%, #7264d6 70.78%);
+  padding: 38px;
+}
+.payment-card__heading {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment-card__money {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.payment-card__row {
+  margin-top: 98px;
+  display: grid;
+  grid-template-columns: 114px auto;
+  column-gap: 26px;
+  white-space: nowrap;
+  align-items: center;
+}
+.payment-card__title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment-card__name {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.payment-card__date {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.payment-card__state {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment-decor-1,
+.payment-decor-2,
+.payment-decor-3 {
+  position: absolute;
+}
+.payment-decor-1 {
+  top: 0;
+  left: 0;
+}
+.payment-decor-2 {
+  top: 38px;
+  right: 38px;
+}
+.payment-decor-3 {
+  right: 0;
+  bottom: 0;
+}
+.payment__send {
+  position: absolute;
+  right: 0;
+  top: -41px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 23px 13px;
+  width: 276px;
+  height: 86px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 14px 38px 0px rgba(0, 0, 0, 0.07);
+}
+.payment__send-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: -4px -2px 16px 0px #fff,
+    4px 2px 16px 0px rgba(136, 165, 191, 0.48);
+  background: rgba(218, 100, 100, 0.1);
+}
+.payment__send-info {
+  margin-left: 14px;
+}
+.payment__send-title {
+  color: #212832;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+.payment__send-desc,
+.payment__send-date {
+  margin-top: 4px;
+  color: #696d76;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment__send-sale {
+  margin-left: auto;
+  text-align: right;
+}
+.payment__send-price {
+  color: #212832;
+  font-family: Inter, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment__income {
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+  border-radius: 16px;
+  background: #439f90;
+}
+.payment__income-title {
+  margin-top: 14px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.payment__income-price {
+  margin-top: 6px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: normal;
 }
